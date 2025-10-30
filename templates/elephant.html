@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elephant</title>
+    <link rel="stylesheet" href='../static/elephant.css'>
+</head>
+<body>
+    <div class='hero'>
+        <div class='factcard' id='factCard'>
+                <h3 id='factTitle'>Elephants</h3>
+                <img id='factImg' src='../static/img/animal/elephant/bg.png'>
+                <p id='factDesc'>Explore the Facsinating Facts about Elephants ..</p>
+        </div>
+        <script>
+        const facts = 
+        [
+            { title: "Endangered", desc: "Indian Elephant is listed as endangered on the IUCN Red List and receives the highest level of protection under India's Wildlife Protection Act", img:"../static/img/animal/elephant/endangered.jpg" },
+            { title: "Memory", desc: "Elephants are known for their remarkable memory, guided by the largest brains among land mammals." , img:"../static/img/animal/elephant/ele1.jpg"},
+            { title: "Hearing", desc: "Sensitive nerve endings in their feet allow elephants to hear through their feets", img:"../static/img/animal/elephant/elefeet.jpg" },
+            { title: "Navigation", desc: "They can recall paths to water and food sources even after many years.", img:"../static/img/animal/elephant/ele.jpg" },
+            { title: "Water Loving Nature", desc: "Unlike Other Animals Elephants love water and are great swimmers ..", img:"../static/img/animal/elephant/ele2.jpg" },
+            { title: "Timing", desc: "They can adjust their schedule to reach fruit or water at the perfect time.", img:"../static/img/animal/elephant/ele4.jpg" },
+            { title: "Compassion", desc: "Like Humans , Elephants Exhibit Love , Compassion , Kind for Other Elephants and Help Those in need", img:"../static/img/animal/elephant/help.webp" },
+            { title: "Sounds", desc: "Elephants can make various kinds of sounds such as snorts , roars , cries and barks", img:"../static/img/animal/elephant/sounds.jpg" },
+            { title: "Dirt as Sunscreen", desc: "Elephants has Sensitive skin that can get sunburned , so to tackle that they show sand on themselves ..", img:"../static/img/animal/elephant/dust.webp" },
+            { title: "Playful Nature", desc: "Baby Elephants are very Playful , and their behavior includes running, splashing in water, and exploring with their trunks", img:"../static/img/animal/elephant/babyele.webp" },
+            { title: "Affectionate", desc: "elephants are extremely affectionate towards their calves, showing deep love and protection through constant physical contact, guidance", img:"../static/img/animal/elephant/love.jpg" },
+            { title: "Temple Elephants", desc: "Despite the religious associations, elephants are said to have originally been used primarily to transport water from the nearest river to the temple", img:"../static/img/animal/elephant/templeele1.jpg" },
+            { title: "Food", desc: "An elephant can eat between 150 kg (330 lbs) and 200 kg (440 lbs) of food per day, depending on its size and the available vegetation.", img:"../static/img/animal/elephant/food.jpg" },
+            { title: "Poaching", desc: "Elephants are poached primarily for their ivory tusks, which are sold in illegal markets for high prices as status symbols, ornaments", img:"../static/img/poaching.jpg" },
+            { title: "Conflict with Human", desc: "Elephants and humans conflict primarily due to habitat loss from human expansion and climate change", img:"../static/img/animal/elephant/conflict.jpg" }
+        
+        ];
+
+        let currentFact = 0;
+
+        const factCard = document.getElementById("factCard");
+        const factTitle = document.getElementById("factTitle");
+        const factDesc = document.getElementById("factDesc");
+        const factImg = document.getElementById("factImg");
+
+        factCard.addEventListener("click", () => 
+        {
+            currentFact = (currentFact + 1) % facts.length;
+            factTitle.textContent = facts[currentFact].title;
+            factDesc.textContent = facts[currentFact].desc;
+            factImg.src = facts[currentFact].img;
+        });
+
+       
+        </script>     
+</body>
+</html>

@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../static/img/animal/lion.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    
+}
+
+
+
+.about-content {
+    background-color: rgba(255,255,255,0.12);
+    margin-top: 80px;
+    width: 70%;
+    padding: 40px 60px;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.about-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    color: yellowgreen;
+    font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:bold;
+  font-style: normal;
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    margin-bottom: 20px;
+}
+
+.credits {
+    margin-top: 30px;
+}
+
+.credits h3 {
+    font-size: 1.5em;
+    color: wheat;
+}
+
+.credits span {
+    color: yellowgreen;
+    font-weight: bold;
+}

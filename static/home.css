@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: url('../static/img/animal/zebra.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(8, 4, 44);
+    padding: 35px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+h2:hover {
+    color: wheat;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+ul a:hover {
+    color: yellowgreen;
+}
+
+li {
+    padding: 10px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px;
+    max-width: 100%;
+    gap: 50px;
+    column-gap: 800px;
+    row-gap: 100px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: black;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+}
+
+.card button {
+    padding: 10px;
+    width: 100%;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(8, 4, 44);
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.submenu li {
+    padding: 8px 20px;
+}
+
+.submenu a {
+    color: whitesmoke;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu a:hover {
+    color: yellowgreen;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.dropdown-card {
+    position: relative;
+    overflow: visible;
+}
+
+.dropdown-card .submenu {
+    display: none;
+    position: absolute;
+    bottom: -40%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(8, 4, 44);
+    list-style: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    min-width: 180px;
+    text-align: center;
+    z-index: 9999;
+}
+
+.dropdown-card.active .submenu {
+    display: block !important;
+}
+
+.dropdown-card .submenu li {
+    padding: 8px 0;
+}
+
+.dropdown-card .submenu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-card .submenu a:hover {
+    color: yellowgreen;
+}
+
+.dropdown-card:hover .submenu {
+    display: block;
+}
+
+.card a {
+    text-decoration: none;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel='stylesheet' href='static/home.css'>
+    </head>
+    <body>
+        <div class='hero'>
+            <div class='navbar'>
+                <h2>Wildlens</h2>
+                <ul id="nav-links">
+                    <li><a href='templates/index.html'>Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">InfoDB ▾</a>
+                            <ul class="submenu">
+                                <li><a href="templates/animalfacts.html">Animals</a></li>
+                                <li><a href="templates/birdfacts.html">Birds</a></li>
+                            </ul>
+                        
+                    </li>
+                    <li><a href='templates/map.html'>Interative Map</a></li>
+                    <li class="dropdown">
+                        <a href="#">Wild Gallery ▾</a>
+                            <ul class="submenu">
+                                <li><a href="templates/animalgallery.html">Animals</a></li>
+                                <li><a href="templates/birdgallery.html">Birds</a></li>
+                            </ul>
+                        
+                    </li>
+                    <li><a href='templates/conserve.html'>Challenges</a></li>
+                    <li><a href='templates/about.html'>About</a></li>
+                </ul>
+            </div>
+            <div class='cards'>
+                <div class='card dropdown-card'>
+                    <img src='static/img/animal/tiger2.jpg'>
+                        <button>Gallery ▾</button>
+                        <ul class="submenu">
+                            <li><a href="templates/animalgallery.html">Animals</a></li>
+                            <li><a href="templates/birdgallery.html">Birds</a></li>
+                        </ul>
+                </div>
+                <div class='card dropdown-card'>
+                    <img src='static/img/animal/leopard.avif'>
+                        <button>Explore Facts ▾</button>
+                        <ul class="submenu">
+                            <li><a href="templates/animalfacts.html">Animals</a></li>
+                            <li><a href="templates/birdfacts.html">Birds</a></li>
+                        </ul>
+                </div>
+                <div class='card'>
+                    <img src='static/img/animal/challenge.webp'>
+                    <button><a href='templates/conserve.html'>Challenges</a></button>
+                </div>
+                <div class='card'>
+                    <img src='static/img/animal/map.jpg'>
+                    <button><a href='templates/map.html'>Wild Map</a></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

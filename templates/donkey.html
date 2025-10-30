@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elephant</title>
+    <link rel="stylesheet" href='../static/elephant.css'>
+</head>
+<body>
+    <div class='hero'>
+        <div class='factcard' id='factCard'>
+                <h3 id='factTitle'>Donkeys</h3>
+                <img id='factImg' src='../static/img/animal/donkey/bg.jpg'>
+                <p id='factDesc'>Explore the Facsinating Facts about Donkeys ..</p>
+        </div>
+        <script>
+        const facts = 
+        [
+            { title: "Endangered", desc: "The wild donkey is listed as critically endangered by the IUCN Red List.Mechanization in agriculture and a lack of support for rural work animals have also contributed to the declining populations", img:"../static/img/animal/donkey/donkey.avif" },
+            { title:"Long Ears", desc:"Being evolved in arid locations , Donkeys use their long ears for heat dissipation" , img:"/static/img/animal/donkey/ears.webp"},
+            { title: "Social Animals", desc: "donkeys are highly social animals that thrive on companionship and can form strong, lifelong bonds with other donkeys and trusted humans. They are reluctant to be alone, and being kept in isolation can cause them stress, depression, and health problems. ", img:"../static/img/animal/donkey/social1.jpg" },
+            { title: "Highly Intelligent", desc: "Scientific Studies Shows that Donkeys are highly intelligent than Other Animals .. donkeys often pause to evaluate danger. This thoughtful approach is often mistaken for stubbornness - but it's actually a sign of intelligence.", img:"../static/img/animal/donkey/intelligent.webp" },
+            { title: "Memory", desc: "Donkeys can remember other animals, places, and people they've encountered even years later.", img:"/static/img/animal/donkey/bg1.jpg" },
+            { title: "Emotions", desc: "Like Humans, donkeys can express their emotions through facial expressions", img:"/static/img/animal/donkey/emotion.webp" },
+            { title: "Guard", desc: "In many rural areas, donkeys act as livestock guardians, protecting sheep and goats from predators like foxes and wild dogs.", img:"../static/img/animal/donkey/guard.webp" },
+            { title: "Stubborn", desc: "Really , Donkeys are not Stubborn. Donkeys have a keen sense of self-preservation. If they feel they are in danger, rather than running away, they will stand their ground and refuse to move", img:"../static/img/animal/donkey/stubborn.webp" },
+            { title: "Hairy Breed", desc: "One of the donkey breed is extremely Hairy", img:"/static/img/animal/donkey/hairy.webp" },
+            { title: "Unique Vocalization", desc: "Among all other animals , donkeys have unique vocalization, it can vocal while both inhaling and exhaling.The hee occurs during air intake, and the haw comes during air outflow.Their calls can travel as far as 3 kilometres", img:"../static/img/animal/donkey/vocal.jpg" },
+            { title: "Donkey Milk", desc: "Donkey's Milk is Closest to human milk and used for infants whom allergic with cow's milk .. It is also rich in antimicrobial compounds, vitamins like C and D, and minerals, which may support the immune system, skin health, and bone development.", img:"../static/img/animal/donkey/donkeymilk.jpg" },
+            { title: "Costliest Milk", desc: "Donkey's milk is considered one of the most expensive milks in the world due to its rarity, low yield, and perceived health benefits .. in india , the avg cost per litre is  Rs.5000 to Rs.7000", img:"../static/img/animal/donkey/expmilk.webp" },
+            { title: "Manure", desc: "Donkey's poop can be used as a valuable soil amendment for gardening and farming, acting as a natural fertilizer to improve soil health and help plants grow", img:"../static/img/animal/donkey/poo.jpg" },
+            { title: "Excellent Digestion", desc: "They have an incredibly efficient digestive system, utilizing 95% of what they eat, and their diet consists mainly of grass, hay, and shrubs.", img:"../static/img/animal/donkey/eat.webp" }
+        ];
+
+        let currentFact = 0;
+
+        const factCard = document.getElementById("factCard");
+        const factTitle = document.getElementById("factTitle");
+        const factDesc = document.getElementById("factDesc");
+        const factImg = document.getElementById("factImg");
+
+        factCard.addEventListener("click", () => 
+        {
+            currentFact = (currentFact + 1) % facts.length;
+            factTitle.textContent = facts[currentFact].title;
+            factDesc.textContent = facts[currentFact].desc;
+            factImg.src = facts[currentFact].img;
+        });
+
+       
+        </script>     
+</body>
+</html>

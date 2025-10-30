@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild Map | WildLens</title>
+    <link rel="stylesheet" href="../static/map.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="hero">
+
+        <div class="map-section">
+            <h1>Interactive Wild Map</h1>
+            <p>Explore the global distribution of various wild species and discover where they thrive the most.</p>
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([20, 0], 2);
+
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 18,
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+
+        const speciesData = [
+            { name: "Tigers - India", lat: 20.5937, lon: 78.9629, color: "orange" },
+            { name: "Elephants - Africa", lat: -1.9577, lon: 37.2972, color: "gray" },
+            { name: "Polar Bears - Arctic", lat: 77.5536, lon: -99.4922, color: "white" },
+            { name: "Kangaroos - Australia", lat: -25.2744, lon: 133.7751, color: "brown" },
+            { name: "Penguins - Antarctica", lat: -75.2509, lon: -0.0714, color: "lightblue" },
+            { name: "Eagles - North America", lat: 40.0, lon: -100.0, color: "gold" },
+            { name: "Pandas - China", lat: 31.2304, lon: 121.4737, color: "black" },
+            { name: "Llamas - South America", lat: -13.1631, lon: -72.5450, color: "beige" },
+            { name: "Wolves - Europe", lat: 54.5260, lon: 15.2551, color: "slategray" },
+            { name: "Peacocks - Sri Lanka", lat: 7.8731, lon: 80.7718, color: "teal" },
+            { name: "Camels - Middle East", lat: 23.8859, lon: 45.0792, color: "sandybrown" },
+            { name: "Moose - Canada", lat: 56.1304, lon: -106.3468, color: "darkolivegreen" },
+            { name: "Koalas - Australia", lat: -33.8688, lon: 151.2093, color: "lightgray" },
+            { name: "Lions - Africa", lat: -2.1540, lon: 34.6857, color: "goldenrod" },
+            { name: "Bald Eagles - USA", lat: 37.0902, lon: -95.7129, color: "darkgoldenrod" },
+            { name: "Reindeers - Scandinavia", lat: 60.4720, lon: 8.4689, color: "chocolate" },
+            { name: "Gorillas - Congo", lat: -0.2280, lon: 15.8277, color: "dimgray" },
+            { name: "Pumas - South America", lat: -14.2350, lon: -51.9253, color: "rosybrown" },
+            { name: "Foxes - United Kingdom", lat: 55.3781, lon: -3.4360, color: "firebrick" },
+            { name: "Snow Leopards - Himalayas", lat: 27.9878, lon: 86.9250, color: "lightsteelblue" }
+        ];
+
+
+        speciesData.forEach(species => {
+            L.circle([species.lat, species.lon], {
+                color: species.color,
+                fillColor: species.color,
+                fillOpacity: 0.6,
+                radius: 500000
+            }).addTo(map).bindPopup(`<b>${species.name}</b>`);
+        });
+    </script>
+</body>
+</html>
